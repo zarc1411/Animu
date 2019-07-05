@@ -10,4 +10,18 @@ const inventorySchema = new Schema({
   lottos: [Number]
 });
 
+inventorySchema.methods.addCoins = async function(amount) {
+  this.coins += amount;
+
+  this.save();
+  return true;
+};
+
+inventorySchema.methods.deductCoins = async function(amount) {
+  this.coins -= amount;
+
+  this.save();
+  return true;
+};
+
 model('Inventory', inventorySchema);
