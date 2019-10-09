@@ -1,8 +1,6 @@
 module.exports = {
-  mongoConnectionString:
-    'mongodb+srv://aldovia:l7JyHbpV1Mdfzu3D@main-cluster-oma3a.mongodb.net/aldovia?retryWrites=true&w=majority',
-  discordBotToken:
-    'NTg1OTE0NTIyMjI1ODY4ODE1.XVe7SQ.AylFdYtoY3tmcJCuj5WY7hyxn-U',
-  aldoviaAPIKey: 'Qi4sPoSF57zOL4Mv',
-  botEnv: 'production',
+  mongoConnectionString: process.env.MONGO_CONNECTION_STRING,
+  discordBotToken: process.env.DISCORD_BOT_TOKEN,
+  aldoviaAPIKey: process.env.ALDOVIA_API_KEY,
+  botEnv: process.env.BOT_ENV,
 };
