@@ -13,4 +13,7 @@ module.exports = {
   delay: function(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   },
+  formatNumber: function(number) {
+		return Number.parseFloat(number).toLocaleString(undefined, { maximumFractionDigits: 2 });
+	}
 };
